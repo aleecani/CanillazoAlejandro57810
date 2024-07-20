@@ -7,3 +7,6 @@ Comprador, Vendedor, Producto. (Éstos se pueden encontrar en el 'models.py' en 
 - También desarrollé una función de 'Busqueda', a la cuál nombré 'buscar_productos' y sirve únicamente para Productos. Trabaja en conjunto con la función 'encontrar_productos'.
 - Edité el 'index.html' para que funcione con mis archivos estáticos.
 - Agregué un menú que contiene un apartado de 'Acerca' y 'Más info. de Contacto', donde los clientes pueden obtener ayuda adicional.
+- Agregué botones para facilitar las interacciones de los usuarios con el entorno, y así poder acceder más fácil a las funciones de la página.(La mayoría de funciones están hechas sin aprovechar el CBV de Django,lo hice así porque estoy añadiendo ésto a el proyecto de mi 3er preentrega y quería que se mantengan en el mismo formato.)
+- Modifiqué la página para que sólo los usuarios que iniciaron sesión y tienen una cuenta registrada puedan ver el contenido completo de la página.
+- Los usuarios que lo deseen podrán modificar sus datos personales y su contraseña en el apartado de 'Perfil' en la parte superior de la página.

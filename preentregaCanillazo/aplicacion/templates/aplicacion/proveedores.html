@@ -1,7 +1,7 @@
 {% extends 'aplicacion/index.html' %}
     
 {% block titulo %}
-<h1 class="text-white-40 mx-auto mt-2 mb-5">Vendedores</h1>
+<h1 class="text-white-40 mx-auto mt-2 mb-5">Proveedores</h1>
 
 {% endblock titulo %}
 
@@ -13,13 +13,13 @@
 
     <tr>
 
-        <td width="200"><h2>Vendedores</h2></td>
+        <td width="200"><h2>Proveedores</h2></td>
 
         <td>
 
             <a
 
-            href="{% url 'vendedorForm' %}"
+            href="{% url 'proveedorForm' %}"
 
             class="btn btn-primary btn-sm"
 
@@ -38,22 +38,24 @@
         <tr>
             <th>Id</th>
             <th>Nombre</th>
-            <th>Nro. de documento</th>
+            <th>Domicilio</th>
+            <th>Nro. de CUIL</th>
             <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
         
-        {% for p in vendedores %}
+        {% for p in proveedores %}
             <tr>
                 <td>{{ p.id }}</td>
                 <td>{{ p.nombre }}</td>
-                <td>{{ p.nro_documento }}</td>
+                <td>{{ p.domicilio }}</td>
+                <td>{{ p.nro_cuil }}</td>
                 <td>
 
                     <a
     
-                      href="{% url 'vendedorUpdate' p.id %}"
+                      href="{% url 'proveedorUpdate' p.id %}"
     
                       class="btn btn-primary"
     
@@ -65,7 +67,7 @@
     
                     <a
     
-                      href="{% url 'vendedorDelete' p.id %}"
+                      href="{% url 'proveedorDelete' p.id %}"
     
                       class="btn btn-danger"
     

@@ -1,15 +1,88 @@
 {% extends 'aplicacion/index.html' %}
     
 {% block titulo %}
-<h1 class="text-white-40 mx-auto mt-2 mb-5">Comprador Agregado.</h1>
+<h1 class="text-white-40 mx-auto mt-2 mb-5">Compradores</h1>
 
 {% endblock titulo %}
 
 
 
 {% block contenido %}
-    
-<h4>Puede seguir operando el prógrama. Si desea ver los compradores agregados hagalo desde '/admin' en la dirección de la página.</h4>
 
+<table>
+
+    <tr>
+
+        <td width="200"><h2>Compradores</h2></td>
+
+        <td>
+
+            <a
+
+            href="{% url 'compradorForm' %}"
+
+            class="btn btn-primary btn-sm"
+
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+
+            </a>
+
+        </td>        
+
+    </tr>
+
+</table>
+    
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Domicilio</th>
+            <th>Nro. de documento</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for p in compradores %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.nombre }}</td>
+                <td>{{ p.domicilio }}</td>
+                <td>{{ p.nro_documento }}</td>
+                <td>
+
+                    <a
+    
+                      href="{% url 'compradorUpdate' p.id %}"
+    
+                      class="btn btn-primary"
+    
+                      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+    
+                      ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+    
+                    </a>
+    
+                    <a
+    
+                      href="{% url 'compradorDelete' p.id %}"
+    
+                      class="btn btn-danger"
+    
+                      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+    
+                      ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+    
+                    </a>                
+    
+                </td>
+
+            </tr>
+        {% endfor %}
+            
+    </tbody>
+</table>
 {% endblock contenido %}
     
