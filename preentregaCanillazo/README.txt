@@ -1,3 +1,6 @@
+usuario de pruebas: administrador
+contraseña: admin123
+
 - Ésta aplicación simula el entorno de una tienda, en donde los administradores con acceso a la página pueden crear y modificar los registros de productos y personas que operen en esa tienda.
 
 - Utilicé un template descargado desde 'startbootstrap.com', al cual le eliminé varios archivos estáticos y botones que consideraba innecesarios.
