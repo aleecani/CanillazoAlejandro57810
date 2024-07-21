@@ -1,5 +1,5 @@
-usuario de pruebas: administrador
-contraseña: admin123
+- usuario de pruebas: administrador
+- contraseña: admin123
 
 - Ésta aplicación simula el entorno de una tienda, en donde los administradores con acceso a la página pueden crear y modificar los registros de productos y personas que operen en esa tienda.
 
